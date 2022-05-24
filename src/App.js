@@ -30,7 +30,7 @@ function App() {
           setDocuments={setDocuments}
         />
       </aside>
-      <div className='editor'>
+      <div className={`editor ${layout.sideMenu ? "sidebar_active" : ""}`} >
         <Header 
           currentDoc={currentDoc}
           documents={documents}

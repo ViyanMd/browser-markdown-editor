@@ -22,7 +22,7 @@ const SideMenu = ({currentDoc, setCurrentDoc, documents, setDocuments, layout, s
     }
 
     return (
-        <div className='sidemenu'>
+        <div className={`sidemenu ${layout.sideMenu ? 'active' : ''}`}>
             <div className='sidemenu_header'>
                 <h2>MY DOCUMENTS</h2>
                 <button className='add_document' onClick={addNewDocument}>Create New</button>
