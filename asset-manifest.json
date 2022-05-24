@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/browser-markdown-editor/static/css/main.b6076adb.css",
+    "main.js": "/browser-markdown-editor/static/js/main.83c126bb.js",
+    "index.html": "/browser-markdown-editor/index.html",
+    "static/media/icons8-document.svg": "/browser-markdown-editor/static/media/icons8-document.4eb37e22aa6c80303634aa814ee2b41c.svg",
+    "main.b6076adb.css.map": "/browser-markdown-editor/static/css/main.b6076adb.css.map",
+    "main.83c126bb.js.map": "/browser-markdown-editor/static/js/main.83c126bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6076adb.css",
+    "static/js/main.83c126bb.js"
+  ]
+}
