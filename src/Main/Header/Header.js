@@ -30,7 +30,7 @@ function Header({layout, setLayout, currentDoc, documents, setDocuments,setCurre
     function handleDelete() {
         const newDocs = [...documents]
         newDocs.splice(newDocs.findIndex(document => document.id === currDoc),1)
-        setCurrentDoc(documents[0].id)
+        setCurrentDoc(newDocs[0].id)
         setDocuments(newDocs)
         localStorage.setItem('docs', JSON.stringify(newDocs))
     }

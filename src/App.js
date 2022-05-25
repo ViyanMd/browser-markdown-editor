@@ -20,7 +20,6 @@ function App() {
 
   return (
     <main >
-      <aside className={`storage__menu ${layout.sideMenu ? 'active' : ''}`}>
         <SideMenu 
           layout={layout} 
           setLayout={setLayout}
@@ -29,7 +28,6 @@ function App() {
           documents={documents}
           setDocuments={setDocuments}
         />
-      </aside>
       <div className={`editor ${layout.sideMenu ? "sidebar_active" : ""}`} >
         <Header 
           currentDoc={currentDoc}

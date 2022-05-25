@@ -21,25 +21,25 @@ const SideMenu = ({currentDoc, setCurrentDoc, documents, setDocuments, layout, s
         setCurrentDoc(id)
     }
 
+    const docList = documents.map(document => (
+            <li  className={`document ${currentDoc === document.id ? 'active' : ''}`} key={document.id} onClick={() => handleCurrentDoc(document.id)}>
+                <p className='doc_name'>{document.name}.md</p>
+                <p className='doc_edit'>Last edited: {document.lastEdited}</p>
+            </li>
+        ))
+
     return (
-        <div className={`sidemenu ${layout.sideMenu ? 'active' : ''}`}>
+        <aside className={`sidemenu ${layout.sideMenu ? 'active' : ''}`}>
             <div className='sidemenu_header'>
                 <h2>MY DOCUMENTS</h2>
                 <button className='add_document' onClick={addNewDocument}>Create New</button>
             </div>
             <div className='documents'>
                 <ul>
-                    {documents.map(document => {
-                        return (
-                            <li key={document.id} className={`document ${currentDoc === document.id ? 'active' : ''}`} onClick={() => handleCurrentDoc(document.id)}>
-                                <p className='doc_name'>{document.name}.md</p>
-                                <p className='doc_edit'>Last edited: {document.lastEdited}</p>
-                            </li>
-                        )
-                    })}
+                    {docList}
                 </ul>
             </div>
-        </div>
+        </aside>
     );
 }
 

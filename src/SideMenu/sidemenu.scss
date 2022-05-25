@@ -1,15 +1,24 @@
 .sidemenu {
+    position: fixed;
+    width: 25rem;
+    height: 100vh;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    min-height: 100vh;
-    width: 100%;
     opacity: 0;
+    transform: translateX(-25rem);
+    padding: 2rem;
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
     .sidemenu_header {
         width: 100%;
         text-align: left;
     }
+
     h2 {
         color: rgba(255, 255, 255, 0.623);
         font-family: 'Roboto';
@@ -24,10 +33,6 @@
         margin: 0;
       }
 
-      &.active {
-          transform: translateX(-25rem);
-          opacity: 1;
-      }
 }
 
 .add_document {
@@ -64,7 +69,6 @@
         border-radius: 4px;
         min-width: 100%;
         padding: 1rem 2rem;
-        transition: background-color 150ms;
       
 
         &:hover {
