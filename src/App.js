@@ -38,7 +38,8 @@ function App() {
           setLocal={setLocal}
           local={local}
           layout={layout} 
-          setLayout={setLayout} />
+          setLayout={setLayout} 
+          setCurrentDoc={setCurrentDoc}/>
         <Editor 
           setCurrentDoc={setCurrentDoc}
           currentDoc={currentDoc}
