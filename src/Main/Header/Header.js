@@ -50,7 +50,7 @@ function Header({layout, setLayout, currentDoc, documents, setDocuments,setCurre
                 </div>
                 <div className="current_doc">
                     <div className="edit__name">
-                        <p>CURRENT DOCUMENT</p>
+                        <p>CURRENT FILE</p>
                         <input className="edit__name_input"  type='text' value={currDoc.name} autoComplete="on" onChange={handleNameChange}/>
                     </div>
                 </div>
