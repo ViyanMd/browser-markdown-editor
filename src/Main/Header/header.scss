@@ -17,6 +17,59 @@ header {
     }
 }
 
+.toggle_side {
+    position: relative;
+    height: 2.4rem;
+    width: 4rem;
+    span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        transition: all 200ms ease-in-out;
+        
+        &:first-child {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 1.2rem;
+        }
+
+        &:nth-child(3) {
+            top: 1.2rem;
+        }
+
+        &:nth-child(4) {
+            top: 2.4rem;
+        }
+    }
+
+    &.open {
+        span {
+        &:first-child {
+            width: 0;
+            left: 50%
+        }
+
+        &:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        &:nth-child(4) {
+            width: 0;
+            left: 50%
+        }
+    }}
+    
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -59,17 +112,6 @@ header {
         }
     
     }
-}
-
-.toggle_side {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 4rem;
-    height: auto;
 }
 
 .current_doc {
@@ -134,7 +176,7 @@ header {
 
     .operations__save {
         cursor: pointer;
-        padding: 1rem;
+        padding: 1rem 1.5rem;
         font-size: 1.5rem;
         line-height: 1;
         font-weight: 500;
@@ -146,12 +188,19 @@ header {
     }
 
     .operations__delete {
+        width: 5rem;
+        height: 5rem;
         cursor: pointer;
         background-color: #2b2d31;
         border: none;
         outline: none;
-
+        transition: 150ms ease-in-out;
+        &:hover {
+            border-radius: 50px;
+            background-color: rgb(24, 24, 24);
+        }
         svg {
+            margin: 0 auto;
             fill: rgb(138, 138, 138);
         }
     }
@@ -186,4 +235,6 @@ header {
         }
     }
 }
+
+
 

@@ -3,7 +3,26 @@
 main {
   display: flex;
   width: 100%;
+  min-height: 100vh;
+}
 
+.editor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  transition: all 200ms ease;
+  &.sidebar_active {
+    transform: translateX(25rem);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .editor {
+    &.sidebar_active {
+      transform: translateX(20rem);
+    }
+  }
 }
 
 
