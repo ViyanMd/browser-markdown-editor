@@ -14,12 +14,13 @@ header {
 @media screen and (max-width: 70rem) {
     header {
         height: 45px;
+        padding: 0.5rem 0.5rem;
     }
 }
 
 .toggle_side {
     position: relative;
-    height: 2rem;
+    height: 2.2rem;
     width: 3.8rem;
     span {
         display: block;
@@ -68,6 +69,61 @@ header {
         }
     }}
     
+}
+
+@media screen and (max-width: 70rem) {
+    .toggle_side {
+        position: relative;
+        height: 1.7rem;
+        width: 2rem;
+        span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            transition: all 200ms ease-in-out;
+            
+            &:first-child {
+                top: 0;
+            }
+    
+            &:nth-child(2) {
+                top: 0.8rem;
+            }
+    
+            &:nth-child(3) {
+                top: 0.8rem;
+            }
+    
+            &:nth-child(4) {
+                top: 1.6rem;
+            }
+        }
+    
+        &.open {
+            span {
+            &:first-child {
+                width: 0;
+                left: 50%
+            }
+    
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+    
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+    
+            &:nth-child(4) {
+                width: 0;
+                left: 50%
+            }
+        }}
+        
+    }
 }
 
 .hero {
@@ -160,11 +216,11 @@ header {
         }
     
         p {
-            font-size: 1rem;
+            font-size: 0.8rem;
         }
     
         input {
-         font-size: 1rem;
+         font-size: .8rem;
          }
     }
 }
@@ -173,7 +229,9 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-
+    & > * {
+        width: 100%;
+    }
     .operations__save {
         cursor: pointer;
         padding: 1rem 1.5rem;
@@ -188,8 +246,6 @@ header {
     }
 
     .operations__delete {
-        width: 50px;
-        height: 50px;
         cursor: pointer;
         background-color: #2b2d31;
         border: none;
@@ -200,8 +256,8 @@ header {
             background-color: rgb(24, 24, 24);
         }
         svg {
-            width: 100%;
-            height: 100%;
+            width: 50px;
+            height: 50px;
             margin: 0 auto;
             fill: rgb(138, 138, 138);
         }
@@ -213,7 +269,7 @@ header {
         display: flex;
         align-items: center;
         gap: 0.5rem;
-    
+
         .operations__save {
             padding: .7rem;
             font-size: 1rem;
@@ -230,9 +286,9 @@ header {
             background-color: #2b2d31;
             border: none;
             outline: none;
-            width: 35px;
-            height: 35px;
             svg {
+                width: 25px;
+                height: 25px;
                 fill: rgb(138, 138, 138);
             }
         }
